@@ -62,7 +62,7 @@ static void ya_getopt_error(const char *optstring, const char *format, ...)
 
 static void check_gnu_extension(const char *optstring)
 {
-    if (optstring[0] == '+' || getenv("POSIXLY_CORRECT") != NULL) {
+    if (optstring[0] == '+') {
         posixly_correct = 1;
     } else {
         posixly_correct = 0;
